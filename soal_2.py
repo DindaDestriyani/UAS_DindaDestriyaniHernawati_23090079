@@ -10,7 +10,6 @@ jumlah_mahasiswa = len(data_mahasiswa)
 
 rata_rata_mahasiswa = []
 
-# Menghitung total nilai untuk setiap mata kuliah dan rata-rata nilai setiap mahasiswa
 for mahasiswa in data_mahasiswa:
     nama = mahasiswa[0]
     nilai_algoritma = mahasiswa[1]
@@ -22,15 +21,13 @@ for mahasiswa in data_mahasiswa:
     rata_rata = (nilai_algoritma + nilai_matematika_numerik) / 2
     rata_rata_mahasiswa.append((nama, rata_rata))
 
-# Menghitung rata-rata nilai untuk setiap mata kuliah
+
 rata_rata_algoritma = total_nilai_algoritma / jumlah_mahasiswa
 rata_rata_matematika_numerik = total_nilai_matematika_numerik / jumlah_mahasiswa
 
-# Menampilkan rata-rata nilai untuk setiap mata kuliah
 print(f"Rata-rata nilai Algoritma: {rata_rata_algoritma:.2f}")
 print(f"Rata-rata nilai Matematika Numerik: {rata_rata_matematika_numerik:.2f}")
 
-# Menampilkan rata-rata nilai untuk setiap mahasiswa
 print("\nRata-rata nilai untuk setiap mahasiswa:")
 for nama, rata_rata in rata_rata_mahasiswa:
     print(f"{nama}: {rata_rata:.2f}")
